@@ -7529,7 +7529,8 @@ a.anchor-link {
 </ul>
 <h2 id="Table-of-Contents"><strong>Table of Contents</strong><a class="anchor-link" href="#Table-of-Contents">¶</a></h2><ol>
 <li><a href="#Introduction">Introduction</a></li>
-<li><a href="#Tutorial-comaprison">Tutorial comparison</a></li>
+<li><a href="#tutorial-comaprison">Tutorial comparison</a></li>
+<li><a href="#Dataset">Dataset</a></li>
 <li><a href="#CNN-Architectures-Used">CNN Architectures Used</a></li>
 <li><a href="#Implementing-Genetic-Algorithm-for-CNN-Training">Implementing Genetic Algorithm for CNN Training</a></li>
 <li><a href="#Comparing-CNNs-Trained-Using-Genetic-Algorithms-and-Traditional-Methods">Comparing CNNs Trained Using Genetic Algorithms and Traditional Methods</a></li>
@@ -7550,7 +7551,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Introduction"><strong>Introduction</strong><a class="anchor-link" href="#Introduction">¶</a></h2><p>Training <strong>Convolutional Neural Networks (CNNs)</strong> efficiently is a key challenge in deep learning. Traditional optimization techniques such as <strong>Stochastic Gradient Descent (SGD)</strong> and <strong>Adam</strong> rely on backpropagation to update model weights. However, <strong>Genetic Algorithms (GAs)</strong> provide an alternative approach by evolving network parameters through a population-based optimization process.</p>
+<h2 id="Introduction-"><strong>Introduction</strong> <a id="Introduction"></a><a class="anchor-link" href="#Introduction-">¶</a></h2><p>Training <strong>Convolutional Neural Networks (CNNs)</strong> efficiently is a key challenge in deep learning. Traditional optimization techniques such as <strong>Stochastic Gradient Descent (SGD)</strong> and <strong>Adam</strong> rely on backpropagation to update model weights. However, <strong>Genetic Algorithms (GAs)</strong> provide an alternative approach by evolving network parameters through a population-based optimization process.</p>
 <p>This tutorial explores how <strong>Genetic Algorithms (GA) can be used to train CNNs</strong> without relying on gradient-based methods. By implementing <strong>selection, crossover, and mutation</strong>, we optimize CNN weights across multiple generations. The <strong>performance of GA-trained CNNs</strong> is then evaluated and compared, highlighting accuracy trends and computational costs.</p>
 <p>Finally, we <strong>apply ensemble learning techniques</strong> to combine multiple GA-trained models into a single classifier, aiming to improve classification performance. This hybrid approach leverages the strengths of different models, leading to a more robust deep learning solution.</p>
 <h3><strong>What is a CNN?</strong> <br/></h3>
@@ -7660,40 +7661,8 @@ Unlike existing tutorials, this guide presents a <strong>comprehensive approach<
 <li><strong>Providing per-class accuracy analysis</strong> to understand <strong>model strengths and weaknesses</strong>.</li>
 <li><strong>Balancing computational efficiency and accuracy</strong> by selecting the best-performing model for real-world applications.</li>
 </ol>
-<p><strong>Pros and Cons of This Tutorial</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Aspect</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>CNN Training</strong></td>
-<td>Covers <strong>both traditional (SGD, Adam) and evolutionary (GA) training</strong> methods.</td>
-<td>GA-based training <strong>requires higher computational resources</strong>.</td>
-</tr>
-<tr>
-<td><strong>Genetic Algorithm (GA)</strong></td>
-<td><strong>Reduces reliance on gradient-based optimization</strong> and enables alternative weight evolution.</td>
-<td>GA training <strong>takes longer than traditional CNN training</strong>.</td>
-</tr>
-<tr>
-<td><strong>Model Evaluation</strong></td>
-<td><strong>Comprehensive comparison</strong> of different training methods with per-class accuracy breakdown.</td>
-<td>Requires <strong>more hyperparameter tuning</strong> for GA to work effectively.</td>
-</tr>
-<tr>
-<td><strong>Ensemble Learning</strong></td>
-<td><strong>Demonstrates how ensembling improves model generalization.</strong></td>
-<td>Simple and Weighted Ensemble methods <strong>could be extended with stacking/meta-learning for further improvements.</strong></td>
-</tr>
-</tbody>
-</table>
 <p><strong>Final Thoughts</strong> <br/>
-This tutorial <strong>bridges the gap between existing CNN tutorials</strong> by <strong>combining Genetic Algorithms with Ensemble Learning</strong>, creating an optimized deep learning pipeline. While traditional PyTorch and CNN tutorials focus on <strong>SGD and Adam</strong>, this approach explores an <strong>alternative training paradigm</strong> that enhances CNN performance while maintaining <strong>generalization through ensembling</strong>.</p>
+This tutorial <strong>bridges the gap between existing CNN tutorials</strong> by <strong>combining Genetic Algorithms with Ensemble Learning</strong>, creating an optimized deep learning pipeline. While traditional PyTorch and CNN tutorials focus on <strong>SGD and Adam</strong>, this approach explores an <strong>alternative training method</strong> that enhances CNN performance while maintaining <strong>generalization through ensembling</strong>.</p>
 </div>
 </div>
 </div>
@@ -7787,7 +7756,7 @@ Device ID :  0
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h3 id="Dataset-Used:-CIFAR-10"><strong>Dataset Used: CIFAR-10</strong><a class="anchor-link" href="#Dataset-Used:-CIFAR-10">¶</a></h3><p>The <strong>CIFAR-10</strong> dataset is used for training and evaluating the CNN models in this tutorial. It is a well-known benchmark dataset in computer vision, widely used for image classification tasks.</p>
+<h2 id="Dataset-"><strong>Dataset</strong> <a id="Dataset"></a><a class="anchor-link" href="#Dataset-">¶</a></h2><h3 id="Dataset-Used:-CIFAR-10"><strong>Dataset Used: CIFAR-10</strong><a class="anchor-link" href="#Dataset-Used:-CIFAR-10">¶</a></h3><p>The <strong>CIFAR-10</strong> dataset is used for training and evaluating the CNN models in this tutorial. It is a well-known benchmark dataset in computer vision, widely used for image classification tasks. The dataset is already pre-processed, so that will not be focused on in this tutorial.</p>
 <h4 id="Dataset-Overview"><strong>Dataset Overview</strong><a class="anchor-link" href="#Dataset-Overview">¶</a></h4><ul>
 <li><strong>Total Images</strong>: 60,000</li>
 <li><strong>Image Size</strong>: 32x32 pixels</li>
@@ -8057,7 +8026,7 @@ The <strong>Custom CNN Model</strong> is a simple yet effective architecture for
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
 <p><strong>Modified CNN Model (CNN_2)</strong> <br/>
-This architecture is similar to the basic CNN but improves on it by incomperating <strong>dropout regularization</strong> and a different convolutional structure. It consists of:</p>
+This architecture is similar to the basic CNN but improves on it by using  <strong>dropout regularization</strong> and a different convolutional structure. It consists of:</p>
 <ul>
 <li><strong>Two convolutional layers</strong> with increased filter depth.</li>
 <li><strong>Two pooling layers</strong> to downsample feature maps.</li>
@@ -8259,7 +8228,7 @@ LeNet-5 is a <strong>classic CNN architecture</strong> originally designed for d
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Define the CNN model from Source [3] modified so it can be used for CIFAR10 dataset</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Define the CNN model from Source [3] modified so it can only be used for CIFAR10 dataset</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">LeNet5</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_classes</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">LeNet5</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -8576,7 +8545,7 @@ LeNet-5 is a <strong>classic CNN architecture</strong> originally designed for d
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h2 id="Implementing-Genetic-Algorithm-for-CNN-Training-"><strong>Implementing Genetic Algorithm for CNN Training</strong> <a id="Implementing-Genetic-Algorithm-for-CNN-Training"></a><a class="anchor-link" href="#Implementing-Genetic-Algorithm-for-CNN-Training-">¶</a></h2><p>In this section, we implement a <strong>Genetic Algorithm (GA) to train Convolutional Neural Networks (CNNs)</strong> without using traditional backpropagation. Instead of gradient-based optimization, we evolve CNN parameters over generations using:</p>
+<h2 id="Implementing-Genetic-Algorithm-for-CNN-Training-"><strong>Implementing Genetic Algorithm for CNN Training</strong> <a id="Implementing-Genetic-Algorithm-for-CNN-Training"></a><a class="anchor-link" href="#Implementing-Genetic-Algorithm-for-CNN-Training-">¶</a></h2><p>In this section, we implement a <strong>Genetic Algorithm (GA) to train Convolutional Neural Networks (CNNs)</strong>. Instead of gradient-based optimization, we evolve CNN parameters over generations using:</p>
 <ul>
 <li><strong>Selection</strong> (choosing the best models),</li>
 <li><strong>Crossover</strong> (combining parameters from two parent models),</li>
@@ -8604,7 +8573,7 @@ LeNet-5 is a <strong>classic CNN architecture</strong> originally designed for d
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># code from source [2] modified to initialise the population from and model class</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># code from source [2] modified to compute the fitness of a model in a population</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">compute_fitness</span><span class="p">(</span><span class="n">criterion</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">trainloader</span><span class="p">,</span> <span class="n">testloader</span><span class="p">,</span> <span class="n">epochs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Computes the fitness of a model by training and evaluating its accuracy.</span>
@@ -8647,10 +8616,10 @@ LeNet-5 is a <strong>classic CNN architecture</strong> originally designed for d
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># code from source [2] modified to initialise the population from and model class</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># code from source [2] modified to initialise the population</span>
 <span class="c1"># write a function to initialise the population</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">initialise_population</span><span class="p">(</span><span class="n">population_size</span><span class="p">,</span> <span class="n">model_class</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
@@ -8689,10 +8658,10 @@ LeNet-5 is a <strong>classic CNN architecture</strong> originally designed for d
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># code from source [2] modified to perform crossover on the any model used.</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># code from source [2] modified to perform crossover on any model used.</span>
 <span class="c1"># write the function to perform the crossover operation</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">crossover</span><span class="p">(</span><span class="n">parent1</span><span class="p">,</span> <span class="n">parent2</span><span class="p">,</span> <span class="n">use_gpu</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
@@ -8776,10 +8745,10 @@ LeNet-5 is a <strong>classic CNN architecture</strong> originally designed for d
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># code from source [2] modified to allow GPU to modify handle model mutation</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># code from source [2] modified to allow GPU to handle model mutation</span>
 <span class="c1"># write the function to perform the mutation operation</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">mutation_rate</span><span class="p">,</span> <span class="n">use_gpu</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
@@ -8822,10 +8791,10 @@ LeNet-5 is a <strong>classic CNN architecture</strong> originally designed for d
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># code from source [2] modified to allow GPU to handle the genetic algorithm, and collects more statistics from the genetic algorithm.</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># code from source [2] modified to allow GPU to handle the genetic algorithm, and collects more statistics from the genetic algorithm exacution.</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">run_genetic_algorithm</span><span class="p">(</span><span class="n">model_class</span><span class="p">,</span> <span class="n">criterion</span><span class="p">,</span> <span class="n">population_size</span><span class="p">,</span> <span class="n">generations</span><span class="p">,</span> <span class="n">trainloader</span><span class="p">,</span> <span class="n">testloader</span><span class="p">,</span> <span class="n">epochs</span><span class="p">,</span> <span class="n">mutation_rate</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Runs a Genetic Algorithm (GA) to optimize a neural network model.</span>
@@ -9223,7 +9192,7 @@ LeNet-5 Training Time: 471.27 seconds
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Traditional-Training-takaways">Traditional Training takaways<a class="anchor-link" href="#Traditional-Training-takaways">¶</a></h4><ol>
+<h4 id="Traditional-Training-takaways"><strong>Traditional Training takaways</strong><a class="anchor-link" href="#Traditional-Training-takaways">¶</a></h4><ol>
 <li><strong>Training Loss Comparison</strong></li>
 </ol>
 <p><em>The first graph shows the training loss curves fro the three CNN architectuires over 10 epochs.</em></p>
@@ -9233,7 +9202,6 @@ LeNet-5 Training Time: 471.27 seconds
 <li>Lenet_5 perfoms the worst with its loss remaining relitively high, indicating underfitting and it struggles to capture the patterns in the dataset.</li>
 </ul>
 <p>CNN_1 outperforms the other models in minimizing loss, suggesting it is better at learning compared to the other models.</p>
-<br/>
 <ol start="2">
 <li><strong>Training vs. Testing Accuracy</strong></li>
 </ol>
@@ -9244,7 +9212,6 @@ LeNet-5 Training Time: 471.27 seconds
 <li>Lenet_5 has the worst accuracy, and shows limitied generalization ability.</li>
 </ul>
 <p>CNN_1 learns the best but risks overfitting, while CNN_2 has the best generalization but has a lower accuracy, and Lenet_5 shows underfitting behaviour, and may not be deep enough for this task.</p>
-<br/>
 <ol start="3">
 <li><strong>Model Comparison: Accuracy and Training Time</strong></li>
 </ol>
@@ -9737,10 +9704,10 @@ This method simply collects predictions from multiple CNN models. Then averages 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># from source [6] modified to be more dynamic and to instead average the outputs of the models</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># from source [5] modified to be more dynamic and to instead average the outputs of the models</span>
 <span class="c1"># define a class to ensemble multiple models</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Ensemble</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">models</span><span class="p">):</span>
@@ -9753,7 +9720,7 @@ This method simply collects predictions from multiple CNN models. Then averages 
         <span class="c1"># Average the predictions</span>
         <span class="n">outputs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">outputs</span>
-<span class="c1">#end of source [6]</span>
+<span class="c1">#end of source [5]</span>
 </pre></div>
 </div>
 </div>
@@ -9814,10 +9781,11 @@ This method assigns different weights to models based on their accuracy, more ac
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">WeightedEnsemble</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># creat a weighted ensemble model, based of the simple ensemble model but modified with weights</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">WeightedEnsemble</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">models</span><span class="p">,</span> <span class="n">accuracies</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Initializes a weighted ensemble of models.</span>
@@ -10698,10 +10666,16 @@ Generating confusion matrix...
 <hr/>
 <h2 id="Conclusion-"><strong>Conclusion</strong> <a id="Conclusion"></a><a class="anchor-link" href="#Conclusion-">¶</a></h2><p>This project explored <strong>different training techniques</strong> for CNN-based image classification, including <strong>traditional training, Genetic Algorithm (GA) optimization, and ensemble learning</strong>. The key findings include:</p>
 <p>Genetic Algorithm (GA) training improved accuracy, particularly for CNN_1 <strong>(72.34%)</strong>, but required significantly more computational time. Ensemble learning, particularly the Weighted Ensemble method, achieved the highest accuracy <strong>(73.53%)</strong>. Despite overall improvements, some challenges remain, especially in classifying certain animal classes (Cat, Bird, Deer).</p>
+<p><strong>Further improvements</strong>
+Further improvements could be achieved by integrating advanced techniques like:</p>
+<ul>
+<li>Transfer learning, by using pretrained models to improve feature extraction, especially for difficult classes like (cat, bird, deer).</li>
+<li>Attention mechanisms, incorporate self-attention or SE blocks(Squeeze and Excitation) to enhance feature selection.</li>
+<li>Stacking ensembles with a meta-learner to better combine model predictions.</li>
+</ul>
 <p><strong>Final Thoughts</strong></p>
 <ul>
 <li>For real-world deployment, ensemble models offer the best balance between accuracy and efficiency.</li>
-<li>Further improvements could be achieved by integrating advanced techniques like transfer learning, attention mechanisms, and stacking ensembles.</li>
 <li>The findings confirm that combining multiple models can lead to superior classification performance while reducing overfitting.</li>
 <li>Weighted Ensemble is the best-performing method for this project!</li>
 </ul>
